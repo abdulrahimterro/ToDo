@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const controller = require("../todo/controller");
-const { joiValidator, catchAsync } = require("../../utils");
+const { joiValidator, catchAsync } = require("../../../utils");
 const validator = require("./validator");
 
 router.post("/add", joiValidator(validator.add), catchAsync(controller.add));

@@ -2,7 +2,15 @@
   "port": 3000,
 
   "DataBase": {
-    "connectionString": "mongodb://localhost:27017/todoDB"
+    "Mongo": {
+      "connectionString": "mongodb://localhost:27017/todoDB"
+    },
+    "MySql": {
+      "dataBaseName": "todoDB",
+      "userName": "abd",
+      "password": "12345",
+      "dialect": "mysql"
+    }
   },
 
   "bcrypt": { "rounds": 10 },

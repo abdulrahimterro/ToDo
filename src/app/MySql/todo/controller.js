@@ -1,5 +1,5 @@
 const service = require("./service");
-const { httpCodes } = require("../../utils");
+const { httpCodes } = require("../../../utils");
 
 module.exports = {
     add: async (req, res) => {
