@@ -11,6 +11,10 @@ module.exports = {
         const result = await service.find(req.params.id, req.user);
         res.status(httpCodes.OK).send(result);
     },
+    findAll: async (req, res) => {
+        const result = await service.findAll(req.user);
+        res.status(httpCodes.OK).send(result);
+    },
     delete: async (req, res) => {
         await service.delete(req.params.id, req.user);
         res.status(httpCodes.DELETED).send();

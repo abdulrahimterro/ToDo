@@ -16,6 +16,10 @@ class todo {
         if (result.userId.toString() != token._id.toString()) throw new Exception(errors.Unauthorized);
         return _.omit(result.toObject(), "__v");
     };
+    static async findAll(token) {
+        const result = await ToDo.find({ userId: token._id });
+        return result;
+    };
     static async delete(id, token) {
         const item = await ToDo.findById(id);
         if (!item) throw new Exception(errors.Item_Not_Found);
