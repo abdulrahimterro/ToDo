@@ -5,8 +5,10 @@ module.exports = (app) => {
     app.use(express.urlencoded({ extended: false }));
     // JSON parser
     app.use(express.json({ limit: "50mb" }));
-    // API Router
-    app.use("/api", require("./router"));
+    // API Router for Mongo
+    app.use("/api/mongo", require("./routerMongo"));
+    // API Router for MySql
+    app.use("/api/MySql", require("./routerMySql"));
     // error handler
     app.use(Exception.handler);
 }
