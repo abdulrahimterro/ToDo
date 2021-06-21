@@ -1,0 +1,29 @@
+{
+  "port": 3000,
+
+  "DataBase": {
+    "connectionString": "mongodb://localhost:27017/todoDB"
+  },
+
+  "bcrypt": { "rounds": 10 },
+
+  "enterpriseAuthentication": {
+    "minCharacters": 8,
+    "maxCharacters": 32,
+    "minUpperCase": 1,
+    "minLowerCase": 1,
+    "minSpecialCharacters": 1,
+    "minNumeric": 1
+  },
+
+  "jwt": {
+    "access": {
+      "key": "f62c983a29207bebde15bf4d53790bbb9756e13f922c4643d32a579f33fb27197abd2b6839a68dfa5c3b57fe978c6c4f545a78f7397eeb755694c71daf45ae7f",
+      "duration": "60d"
+    },
+    "refresh": {
+      "key": "b7bf486ae98a214983d9d5a584d945d0aaca1e342949be3d08e7de85cf1a58a005bc8397518391360401257h75ebf5606928b00b1db0e497ad0edb9dc4a85a05",
+      "duration": "60d"
+    }
+  }
+}
